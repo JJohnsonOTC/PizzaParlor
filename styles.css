@@ -5,3 +5,97 @@
      Project: Cheech's Flexible Pizza Parlor
      File Name: styles.css
      Purpose: To work with and understand flex boxes */
+
+/*_____________________________________________________
+                Base styles
+  _____________________________________________________*/
+* {margin: 0;}
+
+html {
+  width: 100%;
+}
+
+body {
+
+}
+.banner {
+  background-image: url(tablecloth2.png);
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.banner img {
+  margin-left:35%;
+  margin-right: 35%;
+  width: 30%;
+}
+.nav {
+  background-color: rgba(40, 44, 52, .8);
+  height: 50%;
+}
+nav > ul {
+  display: block;
+
+}
+nav > ul li {
+  text-decoration: none;
+  list-style: none;
+
+}
+.container-pizza {
+  width: 80%;
+  margin: auto;
+}
+.submit {
+  width: 20%;
+}
+.cust-info input {
+  width: 60%;
+}
+.form-group {
+  padding-top: 3%;
+  font-size: 1.2em;
+}
+
+
+/*_____________________________________________________
+                Viewport  568px and above
+  _____________________________________________________*/
+@media only screen and (min-width: 568px) {
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .navbar ul {
+    display: flex;
+  }
+  .container-pizza {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .pizza {
+    display: flex;
+    flex-direction: column;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .form-group {
+    flex-wrap: nowrap;
+  }
+
+
+
+
+}

@@ -2,8 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Menu - Cheech's Pizza Parlor</title>
+    <title>Order - Cheech's Pizza Parlor</title>
     <meta name="description" content="Cheech, Pizza, Toppings, Food, Delivery">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/62dc96fb56.js" crossorigin="anonymous"></script>
     <!-- Author: Jeff Johnson
          Date: 07/11/2021
          Project: Cheech's Flexible Pizza Parlor
@@ -11,6 +13,11 @@
          Purpose: To work with and understand flex boxes -->
   </head>
   <body>
+    <header>
+    <div class="banner">
+      <img src="cheechs.png" alt="Cheech's Pizza Logo">
+    </div>
+    <div class="nav">
     <nav class="navbar">
       <ul>
         <li><a href="#">Home</a></li>
@@ -19,5 +26,69 @@
         <li><a href="#">Our Location</a></li>
       </ul>
     </nav>
+    </div>
+    </header>
+    <div class="row">
+      <div class="column">
+        <form class="orderform" action="index.html" method="post" autocomplete="on">
+          <h1>Place an order:</h1>
+
+          <div class="form-group cust-info">
+            <label for="fname">First Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="fname" name="fname" class="fname" placeholder="First Name">
+            </label></div>
+
+          <div class="form-group cust-info">
+            <label for="lname">Last Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="lname" name="lname" class="lname" placeholder="Last Name">
+            </label></div>
+
+          <div class="form-group cust-info">
+            <label for="phone">Phone Number:
+            <input type="tel" id="phone" name="phone" class="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-555-5555">
+            </label></div>
+
+          <div class="form-group">
+            <label for="pizzachoice"> Choose Pizza:
+            <input list="pizzalist" id="pizzachoice">
+            <datalist id="pizzalist">
+              <option value="Tin Coppa"></option>
+              <option value="Up In Smoked Gouda"></option>
+              <option value="Nosh Bridges"></option>
+              <option value="A Margherita to Juan"></option>
+              <option value="Born in East St. Louis"></option>
+              <option value="The Great Pizza Hype"></option>
+            </datalist></label></div>
+
+          <div class="form-group">
+            <label for="quantity">Quantity:
+              <input type="number" id="quantity" name="quantity" min="0" max="99" value="1">
+            </label></div>
+
+          <div class="form-group">
+            <input type="submit" class="submit" name="submit" value="Place Order"></div>
+        </form>
+      </div>
+
+      <div class="column">
+        <div class="testimonials">
+          <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </blockquote>
+          <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </blockquote>
+          <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </blockquote>
+        </div>
+        <div class="socialmedia">
+          <i class="fab fa-facebook-square"></i> <i class="fab fa-linkedin"></i>
+        </div>
+      </div>
+    </div>
+    <footer>
+
+    </footer>
   </body>
 </html>
