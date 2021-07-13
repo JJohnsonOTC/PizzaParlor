@@ -8,7 +8,7 @@
 
 /*_____________________________________________________
                 Base styles
-  _____________________________________________________*/
+  ______________Mobile First Design______________*/
 
 
 html {
@@ -98,26 +98,54 @@ nav > ul li a:hover {
   background-color: rgba(255, 0, 0, 0.8);
   color: white;
 }
+footer {
+  background-color: rgba(40, 44, 52, .8);
+  min-height: 30px;
+  display: flex;
+  color: white;
+}
+.footerLegal{
+  padding-top: 2px;
+  padding-left: 20px;
+}
 .row {
   display: flex;
   flex-direction: row;
   background-color: white;
   filter: drop-shadow(10px 0 50px rgb(51,51,51));
   flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  padding-top: 10px;
+  align-items: stretch;
 }
 .column {
+
   display: flex;
   flex-direction: column;
-  width: 40%;
+  max-width: 700px;
+  width: 100%;
   padding-left: 5%;
   padding-right: 5%;
   flex-wrap: wrap;
-  min-width: 250px;
+  margin: 0;
+  height: auto;
+}
+.orderform{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.form-group {
+  width: 100%;
 }
 
-.form-group {
-  flex-wrap: nowrap;
-}
+
+
 .container-pizza {
   width: 90%;
   margin: auto;
@@ -158,6 +186,11 @@ nav > ul li a:hover {
   min-width: 35px;
   width: 100px;
   height: auto;
+  background-color: white;
+  border-color: red;
+  color: red;
+  border-radius: 5px;
+  font-weight: bold;
 }
 blockquote{
   background-color: rgba(255, 0, 0, 0.5);
@@ -171,7 +204,6 @@ blockquote{
 
 }
 .socialmedia {
-  display: flex;
   width: 100%;
   margin: auto;
   text-align: center;
@@ -179,7 +211,6 @@ blockquote{
 }
 i {
   font-size: 2.0rem;
-  flex-direction: row;
 }
 .cust-info input {
   width: 60%;
@@ -198,6 +229,9 @@ p {
 }
 h1, h2 {
   text-shadow: 1px 1px 3px rgba(0,0,0, .4);
+}
+input#quantity {
+  max-width: 20%;
 }
 /*_____________________________________________________
                 Viewport  568px and above
@@ -228,7 +262,10 @@ h1, h2 {
     flex-basis: 500px;
     }
   .column {
-    min-width: 400px;
+    flex-basis: 581px;
+  }
+  .orderform {
+    flex-basis: 581px;
   }
 
 
