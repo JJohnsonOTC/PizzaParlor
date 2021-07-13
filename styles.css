@@ -9,45 +9,177 @@
 /*_____________________________________________________
                 Base styles
   _____________________________________________________*/
-* {margin: 0;}
+
 
 html {
   width: 100%;
+  font-family: 'Courier New CE', sans-serif;
+  box-sizing: border-box;
+  font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+
 }
 
 body {
-
+  width: 100%;
+  margin: 0;
+  background-image: url(tomatoes.png);
+  font-size: 1.2rem;
 }
+
 .banner {
   background-image: url(tablecloth2.png);
-  height: auto;
+  max-height: 300px;
+  width: 100%;
+  margin: auto;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
+
 .banner img {
-  margin-left:35%;
-  margin-right: 35%;
-  width: 30%;
+  height: 75%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10%;
+  filter: drop-shadow(5px 5px 15px);
+  flex-basis: 250px;
+  flex-shrink: 1;
 }
-.nav {
+.navbar {
   background-color: rgba(40, 44, 52, .8);
-  height: 50%;
-}
-nav > ul {
-  display: block;
+  min-height: 50px;
+  display: flex;
 
 }
-nav > ul li {
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  height: auto;
+  margin: 0;
+  width: 100%;
+  padding: 0px;
+
+
+}
+.navbar ul li {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  min-width: 80px;
+
+}
+nav > ul li a {
   text-decoration: none;
-  list-style: none;
+  color: white;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 8px;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0 auto;
+  min-width: 80px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+nav > ul li a:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  filter: drop-shadow(10px 0 50px rgb(51,51,51));
+  flex-wrap: wrap;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding-left: 5%;
+  padding-right: 5%;
+  flex-wrap: wrap;
+  min-width: 250px;
+}
 
+.form-group {
+  flex-wrap: nowrap;
 }
 .container-pizza {
-  width: 80%;
+  width: 90%;
   margin: auto;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  filter: drop-shadow(10px 0 50px rgb(51,51,51));
+}
+.pizza {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  padding-top: 10px;
+  flex-direction: column;
+  overflow: hidden;
+}
+.menu-img, .menu-text {
+  flex-direction: row;
+  align-items: center;
+}
+.menu-img > img {
+  max-width: 500px;
+  height: 100%;
+  box-sizing: border-box;
+
+}
+.menu-text p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.pizza h2 {
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 .submit {
-  width: 20%;
+  min-width: 35px;
+  width: 100px;
+  height: auto;
+}
+blockquote{
+  background-color: rgba(255, 0, 0, 0.5);
+  border-radius: 10px;
+  color: white;
+  font-style: italic;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  filter: drop-shadow(10px 0 12px rgb(51,51,51));
+
+}
+.socialmedia {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+
+}
+i {
+  font-size: 2.0rem;
+  flex-direction: row;
 }
 .cust-info input {
   width: 60%;
@@ -56,8 +188,17 @@ nav > ul li {
   padding-top: 3%;
   font-size: 1.2em;
 }
+.testimonials blockquote {
+  padding-top: 3%;
+}
 
-
+p {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+h1, h2 {
+  text-shadow: 1px 1px 3px rgba(0,0,0, .4);
+}
 /*_____________________________________________________
                 Viewport  568px and above
   _____________________________________________________*/
@@ -67,8 +208,15 @@ nav > ul li {
     flex-wrap: wrap;
   }
   .navbar ul {
-    display: flex;
+    flex-direction: row;
+
   }
+  .navbar ul li {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .container-pizza {
     display: flex;
     flex-wrap: wrap;
@@ -77,22 +225,10 @@ nav > ul li {
   .pizza {
     display: flex;
     flex-direction: column;
-  }
-  .row {
-    display: flex;
-    flex-direction: row;
-
-  }
+    flex-basis: 500px;
+    }
   .column {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-
-  .form-group {
-    flex-wrap: nowrap;
+    min-width: 400px;
   }
 
 
